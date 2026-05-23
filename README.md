@@ -1,7 +1,7 @@
 # ⚡ Enterprise-Grade TypeScript React Application: "Pokémon Search, Filters & Interactive Gallery"
 
 <p align="center">
-  <img src="./src/assets/output.gif" alt="Pokémon Search Demo" width="100%">
+  <img src="./demo/output.gif" alt="Japan Trip Demo" width="100%">
 </p>
 An asynchronous, type-safe single-page data visualization dashboard engineered with **React 18**, **TypeScript (TSX)**, and bootstrapped via **Create React App (CRA)**. This application securely consumes nested structured data from the RESTful **PokeAPI** via an abstracted API service layer, enforcing compile-time type safety across complex rendering states (`Dynamic Search / Categorized Grid / Stats Carousel`).
 
