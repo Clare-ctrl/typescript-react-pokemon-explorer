@@ -1,46 +1,73 @@
-# Getting Started with Create React App
+# ⚡ Enterprise-Grade TypeScript React Application: "Pokémon Search, Filters & Interactive Gallery"
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+An asynchronous, type-safe single-page data visualization dashboard engineered with **React 18**, **TypeScript (TSX)**, and bootstrapped via **Create React App (CRA)**. This application securely consumes nested structured data from the RESTful **PokeAPI** via an abstracted API service layer, enforcing compile-time type safety across complex rendering states (`Dynamic Search / Categorized Grid / Stats Carousel`).
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## 🚀 Architectural Blueprint & Technical Highlights
 
-### `npm start`
+- **Strictly-Typed Component Architecture:** Fully implemented with **TypeScript**, utilizing strongly-typed interfaces for component props, element attributes, and nested API data models to ensure absolute runtime predictability and zero type leakage.
+- **Multi-View State Machine Routing:** Architected with a clean, decoupled component ecosystem (`components/` and `routes/`) to switch fluidly between dynamic user input portals, category grids, and sub-view carousels without unnecessary DOM node re-renders.
+- **Multi-Paradigm Predictive Query Engine:** Features a robust array filtering runtime inside `SearchInput.tsx`. The filtering layer normalizes text inputs to lowercase for fuzzy substring queries, or dynamically casts inputs into stringified indices for absolute numeric lookups.
+- **Dynamic Attribute Taxonomy Filtering:** Managed via `TabSection.tsx` and `TabButton.tsx`. Selecting an elemental tag triggers synchronous array-prototype filtering, isolating and updating the localized grid inside `GalleryView.tsx` instantly.
+- **Stateful Bi-Directional Carousel Navigation:** Inside `CarouselView.jsx`, features an index-tracked `Prev` & `Next` state driver that handles data synchronization across multi-nested statistical arrays while enforcing safety guardrails at terminal nodes.
+- **Decoupled API Layer & Data Normalization:** Contains an isolated `api.ts` and data fetching orchestration module (`FetchData.tsx`) that abstracts network requests, processes asynchronous promises, and strips away redundant JSON schemas before serving data down to presentation views.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+---
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## 🛠️ Technology Stack & Engineering Matrix
 
-### `npm test`
+- **Core Framework:** React 18+ (Functional Components, Hooks)
+- **Type System:** TypeScript (Strict Compilation Mode, Unified Custom Interfaces)
+- **Build Automation & Scaffold:** Create React App (CRA), Webpack Asset Pipeline, Babel downward compilation
+- **Styling Architecture:** Component-Scoped CSS Isolation Profiles (`*.css` paired alongside `*.tsx`)
+- **Data Protocols:** RESTful API Promises, JSON Object Deserialization
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## 📂 Production Directory Topology
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```text
+├── build/                   # Production-ready optimized static build artifacts
+│   ├── static/              # Compiled, minified JavaScript and CSS chunks
+│   └── asset-manifest.json  # Dependency tracking manifest for caching optimization
+├── public/                  # Global public resources and HTML template shell
+├── src/                     # Core application source tree
+│   ├── assets/              # Compressed graphic media assets
+│   ├── components/          # Scalable presentation & interaction components
+│   │   ├── FetchData.tsx    # API core rendering orchestrator
+│   │   ├── GalleryView.css  # Thumbnail grid layout sheets
+│   │   ├── GalleryView.tsx  # Dynamic grid filtering presentation container
+│   │   ├── Header.css / .tsx# Premium gradient branding header banner
+│   │   ├── SearchInput.css  # Search box and control selection styling
+│   │   ├── SearchInput.tsx  # Fuzzy search multi-paradigm input controller
+│   │   ├── TabButton.tsx    # Reusable atomic category select buttons
+│   │   ├── TabSection.css   # Element category container boundaries
+│   │   └── TabSection.tsx   # Sub-navigation taxonomy filtering wrapper
+│   ├── routes/              # Sub-view visualization modules
+│   │   ├── Carousel.css     # Detail modal transition sheets
+│   │   └── CarouselView.jsx # State-driven detail slider carousel component
+│   ├── api.ts               # Abstracted RESTful PokeAPI network service module
+│   ├── App.tsx              # Global state engine, state distributor, & route manager
+│   ├── index.css            # Base stylesheet layers & CSS variables matrix
+│   ├── index.tsx            # React DOM injection and StrictMode mounting root
+│   └── react-app-env.d.ts   # Global TypeScript type declaration maps
+├── tsconfig.json            # Advanced TypeScript compiler behavior configuration
+└── package.json             # Module manifest, build scripts, & dependency registry
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 💻 Core Technical Implementation Highlight
 
-### `npm run eject`
+### Type-Safe Data Fetching Pipeline (`api.ts` & `FetchData.tsx`)
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+By decoupling network layers from the UI, the application leverages strongly-typed definitions to model structural variables safely, ensuring that variable fields such as `hp`, `attack`, or nested property arrays are checked prior to user-interface state propagation:
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+---
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## 👩‍💻 About the Engineer
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+I am an incoming Software Engineer and a Graduate Student pursuing a Master of Computer Science (MCS) at the **University of Illinois Urbana-Champaign (UIUC)**, holding a perfect **4.0/4.0 GPA**.
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+My expertise bridges robust backend algorithms with type-safe frontend UI/UX architectures. This project stands as a concrete demonstration of my ability to design resilient state lifecycles, manage multi-layered asynchronous data bindings via **TypeScript**, and ship highly modular, scalable consumer interfaces.

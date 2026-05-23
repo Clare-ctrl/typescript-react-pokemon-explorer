@@ -1,8 +1,8 @@
 //Import imges
-import poke1 from '../assets/poke1.png';
+import poke1 from "../assets/poke1.png";
 import "./Header.css";
 
-const reactDescriptions = ['Look', 'Check out', 'Play and enjoy'];
+const reactDescriptions = ["Look", "Check out", "Play and enjoy"];
 function genRandomInt(max: number) {
   return Math.floor(Math.random() * (max + 1));
 }
@@ -12,9 +12,10 @@ export default function Header() {
   return (
     <header>
       <img src={poke1} alt="pokemon title" />
-      <h1>pokémon SEARCH</h1>
+      <h1>Pokémon SEARCH</h1>
       <p>
-        {description}! This database can search and display Pokémon in a gallery.
+        {description}! This database can search and display Pokémon in a
+        gallery.
       </p>
     </header>
   );
