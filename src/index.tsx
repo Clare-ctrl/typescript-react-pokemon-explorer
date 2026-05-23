@@ -28,7 +28,7 @@ const router = createBrowserRouter(
       ],
     },
   ],
-  { basename: "/MP2" },
+  { basename: "/typescript-react-pokemon-explorer" },
 );
 
 root.render(

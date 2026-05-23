@@ -1,8 +1,8 @@
 {
-  "name": "MP2",
+  "name": "typescript-react-pokemon-explorer",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://Clare-ctrl.github.io/MP2",
+  "homepage": "https://Clare-ctrl.github.io/typescript-react-pokemon-explorer",
   "dependencies": {
     "@testing-library/dom": "^10.4.1",
     "@testing-library/jest-dom": "^6.9.1",
